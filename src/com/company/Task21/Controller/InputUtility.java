@@ -1,6 +1,7 @@
 package com.company.Task21.Controller;
 
-import com.company.Task21.Constants.Constants;
+
+import com.company.Task21.Constants.ConstantPhrases;
 import com.company.Task21.View.ViewPatient;
 
 import java.util.Scanner;
@@ -9,12 +10,12 @@ public class InputUtility {
     private static Scanner scanner = new Scanner(System.in);
 
     public static String inputValueWithScanner(ViewPatient view){
-        view.printMessage(Constants.START_POINT);
+        view.printMessage(ConstantPhrases.START_POINT);
         view.printAllCommands();
-        while (!scanner.hasNext()){
-            view.printMessage(Constants.ERR_INCORRECT_COMMAND);
-            scanner.next();
+        while (!scanner.hasNextLine()){
+            view.printMessage(ConstantPhrases.ERR_INCORRECT_COMMAND);
+            scanner.nextLine();
         }
-        return scanner.next();
+        return scanner.nextLine();
     }
 }

@@ -1,16 +1,23 @@
 package com.company.Task21.Model;
 
-public class Patient implements Comparable<Patient>{
+public class Patient{
     private String firstName;
     private String lastName;
-    private String patronymic;
+    private String middleName;
     private String address;
     private long phoneNumber;
     private int cardID;
     private String diagnose;
 
-
-
+    public Patient(String firstName, String lastName, String middleName, String address, long phoneNumber, int cardID, String diagnose) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.cardID = cardID;
+        this.diagnose = diagnose;
+    }
 
     public String getLastName() {
 
@@ -29,12 +36,12 @@ public class Patient implements Comparable<Patient>{
         this.firstName = firstName;
     }
 
-    public String getPatronymic() {
-        return patronymic;
+    public String getMiddleName() {
+        return middleName;
     }
 
-    public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     public String getAddress() {
@@ -71,13 +78,18 @@ public class Patient implements Comparable<Patient>{
 
     @Override
     public String toString() {
-        return "First name: "+firstName+"\t Last name: "+lastName+"\t Patronymic: "+patronymic+"" +
-                "\t Address: "+address+"\t Phone number: "+phoneNumber+"\t CardID: "+cardID+
-                "\t Diagnose: "+diagnose;
+        return "Patient{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", address='" + address + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", CardID='" + cardID + '\'' +
+                ", diagnose='" + diagnose + '\'' +
+                '}';
+
     }
 
-    @Override
-    public int compareTo(Patient o) {
-        return firstName.compareTo(o.getFirstName());
-    }
+
+
 }
