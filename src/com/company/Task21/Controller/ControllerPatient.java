@@ -1,7 +1,7 @@
 package com.company.Task21.Controller;
 
 import com.company.Task21.Constants.ConstantPhrases;
-import com.company.Task21.Model.Entity.ModelPatient;
+import com.company.Task21.Model.ModelPatient;
 import com.company.Task21.View.ViewPatient;
 
 public class ControllerPatient {

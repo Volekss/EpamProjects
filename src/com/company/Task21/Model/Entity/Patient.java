@@ -1,4 +1,4 @@
-package com.company.Task21.Model;
+package com.company.Task21.Model.Entity;
 
 public class Patient{
     private String firstName;

@@ -1,6 +1,6 @@
 package com.company.Task21.DataSource;
 
-import com.company.Task21.Model.Patient;
+import com.company.Task21.Model.Entity.Patient;
 
 public class DataSource {
     public static Patient[] getData(){

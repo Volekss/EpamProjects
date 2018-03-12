@@ -1,8 +1,8 @@
-package com.company.Task21.Model.Entity;
+package com.company.Task21.Model;
 
 import com.company.Task21.Constants.ConstantPhrases;
 import com.company.Task21.DataSource.DataSource;
-import com.company.Task21.Model.Patient;
+import com.company.Task21.Model.Entity.Patient;
 import com.company.Task21.Utils.ComparatorCardID;
 import com.company.Task21.Utils.ComparatorFirstName;
 import com.company.Task21.View.ViewPatient;

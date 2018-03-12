@@ -2,7 +2,7 @@ package com.company.Task21.View;
 
 
 import com.company.Task21.Constants.ConstantPhrases;
-import com.company.Task21.Model.Patient;
+import com.company.Task21.Model.Entity.Patient;
 
 public class ViewPatient {
     public void printMessage(String message) {

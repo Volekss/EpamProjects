@@ -12,6 +12,7 @@ public abstract class Shape implements Drawable {
     }
 
     public abstract double calcArea();
+    public abstract double getArea();
 
     @Override
     public String toString() {

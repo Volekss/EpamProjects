@@ -1,6 +1,6 @@
 package com.company.Task21.Utils;
 
-import com.company.Task21.Model.Patient;
+import com.company.Task21.Model.Entity.Patient;
 
 import java.util.Comparator;
 
