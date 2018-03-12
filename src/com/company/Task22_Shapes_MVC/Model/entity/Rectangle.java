@@ -1,8 +1,12 @@
 package com.company.Task22_Shapes_MVC.Model.entity;
 
+import com.company.Task22_Shapes_MVC.View.ViewShape;
+
 public class Rectangle extends Shape {
+    ViewShape view = new ViewShape();
     private double width;
     private double length;
+    private double area;
 
     public double getWidth() {
         return width;
@@ -10,6 +14,10 @@ public class Rectangle extends Shape {
 
     public double getLength() {
         return length;
+    }
+
+    public double getArea() {
+        return area;
     }
 
     public Rectangle(double width, String shapeColor) {
@@ -21,6 +29,7 @@ public class Rectangle extends Shape {
         this.width = width;
         this.length = length;
         this.shapeColor = shapeColor;
+        area = calcArea();
     }
 
     @Override
@@ -30,8 +39,7 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw() {
-        // TODO: 09-Mar-18 view.print("Draw rectangle");
-        System.out.println("");
+        view.printMessage(toString());
     }
 
 
@@ -40,6 +48,7 @@ public class Rectangle extends Shape {
         return "Rectangle{" +
                 "width=" + width +
                 ", length=" + length +
+                ", area=" + area +
                 ", shapeColor='" + shapeColor + '\'' +
                 '}';
     }

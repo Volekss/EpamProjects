@@ -1,32 +1,42 @@
 package com.company.Task22_Shapes_MVC.Model.entity;
 
+import com.company.Task22_Shapes_MVC.View.ViewShape;
+
 public class Triangle extends Shape {
-    private int b;
-    private int a;
-    private int c;
+    ViewShape view = new ViewShape();
+    private double b;
+    private double a;
+    private double c;
+    private double area;
 
 
-    public Triangle(int a,String shapeColor) {
+    public Triangle(double a,String shapeColor) {
         this(a, a, a, shapeColor);
     }
 
-    public Triangle(int a, int b, int c, String shapeColor) {
+    public Triangle(double a, double b, double c, String shapeColor) {
         super(shapeColor);
+
         this.a = a;
         this.b = b;
         this.c = c;
+        area = calcArea();
     }
 
-    public int getA() {
+    public double getA() {
         return a;
     }
 
-    public int getB() {
+    public double getB() {
         return b;
     }
 
-    public int getC() {
+    public double getC() {
         return c;
+    }
+
+    public double getArea() {
+        return area;
     }
 
     @Override
@@ -37,8 +47,7 @@ public class Triangle extends Shape {
 
     @Override
     public void draw() {
-        //todo view.sout
-        System.out.println();
+        view.printMessage(toString());
     }
 
     @Override
@@ -47,6 +56,7 @@ public class Triangle extends Shape {
                 "a=" + a +
                 ", b=" + b +
                 ", c=" + c +
+                ", area=" + area +
                 ", shapeColor='" + shapeColor + '\'' +
                 '}';
     }
